@@ -27,7 +27,8 @@ root.render(
         withGlobalStyles
         withNormalizeCSS
         theme={{
-          dir: direction
+          dir: direction,
+          fontFamily: "IRANSans"
         }}
         emotionCache={direction === DirectionModel.RTL ? rtlCache : undefined}
       >
