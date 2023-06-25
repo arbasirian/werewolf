@@ -1,7 +1,14 @@
-import React from 'react';
+import React from "react";
+
+import { PlayersList, NewPlayer } from "components";
 
 const PlayersPage: React.FC = () => {
-  return <div>PlayersPage</div>;
+  return (
+    <div>
+      <PlayersList />
+      <NewPlayer />
+    </div>
+  );
 };
 
 export default PlayersPage;

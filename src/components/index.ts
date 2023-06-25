@@ -1,4 +1,6 @@
-export {default as PlayersHeader} from './players/players-header';
-export {default as PlayersList} from './players/players-list';
+export { default as PlayersHeader } from "./players/players-header";
+export { default as PlayersList } from "./players/players-list";
+export { default as NewPlayer } from "./players/new-player";
+export { default as Player } from "./players/palyer";
 
-export {default as Template} from './template';
+export { default as Template } from "./template";

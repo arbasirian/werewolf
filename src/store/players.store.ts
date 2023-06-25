@@ -1,10 +1,11 @@
-import {create} from 'zustand';
+import { create } from "zustand";
 
-import {PlayersStoreModel} from 'models';
+import { PlayerModel, PlayersStoreModel } from "models";
 
 const usePlayersStore = create<PlayersStoreModel>(set => ({
   players: [],
-  addNewPlayers: () => set(state => ({players: [...state.players]}))
+  addNewPlayers: (info: PlayerModel) =>
+    set(state => ({ players: [...state.players, info] }))
 }));
 
 export default usePlayersStore;

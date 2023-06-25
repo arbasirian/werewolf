@@ -1,7 +1,11 @@
+import { PlayerModel } from "models";
 import React from "react";
 
-const Player: React.FC = () => {
-  return <div>Player</div>;
+interface Props {
+  info: PlayerModel;
+}
+const Player: React.FC<Props> = ({ info }) => {
+  return <div>{info.name}</div>;
 };
 
 export default Player;
