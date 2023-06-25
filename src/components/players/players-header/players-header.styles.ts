@@ -4,7 +4,8 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px 10px;
+  background-color: white;
 `;
 
 export const HeaderTitle = styled.div`

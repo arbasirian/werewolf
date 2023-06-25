@@ -5,7 +5,7 @@ import uuid from "react-uuid";
 import usePlayersStore from "store/players.store";
 
 const NewPlayer: React.FC = () => {
-  const { addNewPlayers } = usePlayersStore();
+  const { onAddPlayer } = usePlayersStore();
   const form = useForm({
     initialValues: {
       name: ""
@@ -16,7 +16,7 @@ const NewPlayer: React.FC = () => {
   });
 
   const handleNew = (name: string) => {
-    addNewPlayers({ name, uid: uuid() });
+    onAddPlayer({ name, uid: uuid() });
     form.reset();
   };
 

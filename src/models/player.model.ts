@@ -5,5 +5,9 @@ export interface PlayerModel {
 
 export interface PlayersStoreModel {
   players: PlayerModel[];
-  addNewPlayers: (player: PlayerModel) => void;
+  selectedPlayers: string[];
+
+  onAddPlayer: (player: PlayerModel) => void;
+  onSelectPlayer: (uid: string) => void;
+  onSelectAllPlayers: () => void;
 }
