@@ -5,9 +5,16 @@ import reportWebVitals from "./reportWebVitals";
 import { IntlProvider } from "react-intl";
 import { persianLocale } from "localization/fa";
 import useMainStore from "store/main.store";
-import { MantineProvider } from "@mantine/core";
+import { MantineProvider, createEmotionCache } from "@mantine/core";
+import { DirectionModel } from "models";
+import rtlPlugin from "stylis-plugin-rtl";
 
 const { lang, direction } = useMainStore.getState();
+
+const rtlCache = createEmotionCache({
+  key: "mantine-rtl",
+  stylisPlugins: [rtlPlugin]
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -22,6 +29,7 @@ root.render(
           dir: direction,
           fontFamily: "IRANSans"
         }}
+        emotionCache={direction === DirectionModel.RTL ? rtlCache : undefined}
       >
         <App />
       </MantineProvider>
