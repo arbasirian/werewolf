@@ -1,15 +1,17 @@
-import React from 'react';
-import {Checkbox} from '@mantine/core';
-import {FormattedMessage} from 'react-intl';
+import React from "react";
+import { FormattedMessage } from "react-intl";
+import { Checkbox } from "@mantine/core";
+
+import { HeaderContainer } from "./players-header.styles";
 
 const PlayersHeader: React.FC = () => {
   return (
-    <div>
+    <HeaderContainer>
       <Checkbox />
       <div>
         <FormattedMessage id="players" defaultMessage="Players List" />
       </div>
-    </div>
+    </HeaderContainer>
   );
 };
 
