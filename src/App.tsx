@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { PlayersPage } from "pages";
-import { PlayersHeader, Template } from "components";
+import { PlayersPage, RolesPage } from "pages";
+import { PlayersHeader, RolesHeader, Template } from "components";
 import usePlayersStore from "store/players.store";
 
 const App: React.FC = () => {
@@ -21,6 +21,18 @@ const App: React.FC = () => {
                 footer={players.length > 0 ? <>here</> : null}
               >
                 <PlayersPage />
+              </Template>
+            }
+          />
+
+          <Route
+            path="/roles"
+            element={
+              <Template
+                header={<RolesHeader />}
+                footer={players.length > 0 ? <>here</> : null}
+              >
+                <RolesPage />
               </Template>
             }
           />
