@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterContainer } from "./template.styles";
+import { ChildrenContainer, FooterContainer } from "./template.styles";
 
 interface Props {
   header: React.ReactNode;
@@ -13,7 +13,7 @@ const TemplateContainer: React.FC<React.PropsWithChildren<Props>> = ({
   return (
     <div>
       <div>{header}</div>
-      <div>{children}</div>
+      <ChildrenContainer>{children}</ChildrenContainer>
       {footer && <FooterContainer>{footer}</FooterContainer>}
     </div>
   );

@@ -20,7 +20,8 @@
       "components": ["components"],
       "pages": ["pages"],
       "store": ["store"],
-      "models": ["models"]
+      "models": ["models"],
+      "assets": ["assets"]
     }
   },
   "include": ["src"]

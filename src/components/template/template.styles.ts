@@ -14,3 +14,7 @@ export const FooterContainer = styled.div`
   min-height: 70px;
   width: 100%;
 `;
+
+export const ChildrenContainer = styled.div`
+  padding: 20px;
+`;
